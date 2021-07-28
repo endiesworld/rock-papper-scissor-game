@@ -14,7 +14,9 @@ class Participant:
         switcher = {
             "rock": 0,
             "paper": 1,
-            "scissor": 2
+            "scissor": 2,
+            "lizard": 3,
+            "spock": 4
         }
         return switcher[self.choice]
 
@@ -27,9 +29,11 @@ class GameRound:
         p1.choose()
         p2.choose()
         self.rules = [
-            [0, -1, 1],
-            [1, 0, -1],
-            [-1, 1, 0]
+            [0, -1, 1, 1, -1],
+            [1, 0, -1, -1, 1],
+            [-1, 1, 0, 1, -1],
+            [-1, 1, -1, 0, 1],
+            [1, -1, 1, -1, 0]
         ]
         result = self.compareChoices(p1, p2)
         print("Round resulted in a {result}".format(
