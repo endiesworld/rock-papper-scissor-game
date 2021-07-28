@@ -39,9 +39,6 @@ class Game:
         print("implement")
 
 
-game = Game()
-game.start()
-
 # class Square:
 #     def __init__(self, w, h):
 #         self.height = h
